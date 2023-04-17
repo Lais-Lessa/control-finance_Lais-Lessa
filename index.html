@@ -16,11 +16,86 @@
     />
     <link rel="stylesheet" href="./src/styles/globalStyles.css" />
     <link rel="stylesheet" href="./src/styles/index.css" />
+    <link rel="stylesheet" href="./src/styles/header.css" />
+    <link rel="stylesheet" href="./src/styles/mainHeader.css" />
+    <link rel="stylesheet" href="./src/styles/modal.css" />
+    <link rel="stylesheet" href="./src/styles/desktop.css" />
+    <link rel="stylesheet" href="./src/styles/card.css" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
   </head>
   <body>
-    <main id="app"></main>
-    <script src="./src/scripts/modal.js"></script>
+    <header class="header">
+      <p class="header__text"> <span class="purple">Control</span> Finance</p>
+      <button class="header__button"> Registrar novo valor</button>
+    </header>
+
+    <dialog class="modal__controller"> 
+      <div class="modal__container">
+        <div class="modal__register">
+          <p class="modal__text-register">Registro de valor</p>
+          <button class="modal__btn-close">X</button>
+        </div>
+        <div class="modal__div-description">
+          <p class="modal__text-description">Digite o valor e em seguida aperte no botão referente ao tipo do valor </p>
+        </div>
+        <form id="form">
+          <div class="modal__div-input">
+            <p class="modal__text-value">Valor</p>
+            <input name="currency" id="currency" class="modal__input" type="text" placeholder="R$ 00,00">
+            <div class="buttons__modal-p">
+              <p class="buttons__modal-text">Tipo de valor</p>
+              <label for="entry">Entrada</label>
+              <input id="entry" class="text__modal-button" type="radio" name="entry">
+              <label for="exit">Saída</label> 
+              <input id="exit" class="text__modal-button" type="radio" name="exit">
+              <div class="buttons__modal">
+                <button id="btn_inputExit" class="btn__input">Cancelar</button>
+                <button id="btn_inputEntry" class="btn__value">Inserir valor</button>
+              </div>
+        </form>
+        </div>
+        </div>
+      </div>
+    </dialog>
+
+    <main id="app" class="app">
+      <section class="app__header">
+        <p class="app__text"> Resumo financeiro</p>
+        <div class="container__buttons-app">
+          <button class="button__appMain todos">Todos</button>
+          <button class="button__appMain entrada"> Entradas </button>
+          <button class="button__appMain saida">Saídas</button>
+        </div>
+      </section>
+
+      <section class="app__sum">
+        <p class="app__sum-text">Soma dos valores</p>
+        <p class="app__sum-value">R$</p>
+      </section>
+      <div class="div__empty-none" id="div-empty">
+        <h2 class="empty__title">Nenhum valor cadastrado</h2>
+        <span class="empty__open-modal header__button">Resgistrar novo valor</span>
+      </div>
+      <section class="main"> 
+        <ul class="main__list">
+          <li class="card">
+            <span class="value">R$ 40,00</span>
+            <div class="category__entry">
+              <span class="entry">Entrada</span>
+              <button class="button__exit"> <i class="fa-solid fa-trash card__icon"></i></button>
+            </div>
+          </li>
+        </ul>
+      </section>
+    </main>
+
     <script src="./src/scripts/valuesData.js"></script>
-    <script src="./src/scripts/index.js"></script>
+    <script type="module" src="./src/scripts/modal.js"></script>
+    <script type="module" src="./src/scripts/index.js"></script>
+
   </body>
 </html>

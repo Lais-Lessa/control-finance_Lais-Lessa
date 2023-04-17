@@ -1,1 +1,36 @@
 /* Desenvolva a estilização da sua página aqui */
+.div__empty{
+    display: block;
+    width: 100%;
+    background-color: var(--color-grey-5);
+    height: 84px;
+    border-radius: var(--radius-1);
+    gap: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1.5px dashed var(--color-grey-5);
+    margin-top: 30px;
+}
+
+.div__empty-none{
+    display: none;
+}
+.text__modal-button{
+display: none;
+
+}
+
+.empty__title{
+    font-size: var(--font-size-2);
+    font-weight: var(--font-weight-1);
+    line-height: var(--font-line-height-1);
+    color: var(--color-grey-1);
+
+}
+
+.empty__open-modal{
+    text-align: center;
+    color: var(--color-grey-2);
+}
+
