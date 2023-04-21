@@ -29,8 +29,10 @@
   </head>
   <body>
     <header class="header">
-      <p class="header__text"> <span class="purple">Control</span> Finance</p>
-      <button class="header__button"> Registrar novo valor</button>
+      <nav>
+        <p class="header__text"> <span class="purple">Control</span> Finance</p>
+        <button class="header__button"> Registrar novo valor</button>
+      </nav>
     </header>
 
     <dialog class="modal__controller"> 
@@ -52,6 +54,7 @@
               <input id="entry" class="text__modal-button" type="radio" name="entry">
               <label for="exit">Saída</label> 
               <input id="exit" class="text__modal-button" type="radio" name="exit">
+            </div>
               <div class="buttons__modal">
                 <button id="btn_inputExit" class="btn__input">Cancelar</button>
                 <button id="btn_inputEntry" class="btn__value">Inserir valor</button>
@@ -62,36 +65,39 @@
       </div>
     </dialog>
 
-    <main id="app" class="app">
-      <section class="app__header">
-        <p class="app__text"> Resumo financeiro</p>
-        <div class="container__buttons-app">
-          <button class="button__appMain todos">Todos</button>
-          <button class="button__appMain entrada"> Entradas </button>
-          <button class="button__appMain saida">Saídas</button>
-        </div>
-      </section>
 
-      <section class="app__sum">
-        <p class="app__sum-text">Soma dos valores</p>
-        <p class="app__sum-value">R$</p>
-      </section>
-      <div class="div__empty-none" id="div-empty">
-        <h2 class="empty__title">Nenhum valor cadastrado</h2>
-        <span class="empty__open-modal header__button">Resgistrar novo valor</span>
-      </div>
-      <section class="main"> 
-        <ul class="main__list">
-          <li class="card">
-            <span class="value">R$ 40,00</span>
-            <div class="category__entry">
-              <span class="entry">Entrada</span>
-              <button class="button__exit"> <i class="fa-solid fa-trash card__icon"></i></button>
-            </div>
-          </li>
-        </ul>
-      </section>
-    </main>
+    <div class="container">
+      <main id="app" class="app">
+        <section class="app__header">
+          <p class="app__text"> Resumo financeiro</p>
+          <div class="container__buttons-app">
+            <button class="button__appMain todos">Todos</button>
+            <button class="button__appMain entrada"> Entradas </button>
+            <button class="button__appMain saida">Saídas</button>
+          </div>
+        </section>
+  
+        <section class="app__sum">
+          <p class="app__sum-text">Soma dos valores</p>
+          <p class="app__sum-value">R$</p>
+        </section>
+        <div class="div__empty-none" id="div-empty">
+          <h2 class="empty__title">Nenhum valor cadastrado</h2>
+          <span class="empty__open-modal header__button">Resgistrar novo valor</span>
+        </div>
+        <section class="main"> 
+          <ul class="main__list">
+            <li class="card">
+              <span class="value">R$ 40,00</span>
+              <div class="category__entry">
+                <span class="entry">Entrada</span>
+                <button class="button__exit"> <i class="fa-solid fa-trash card__icon"></i></button>
+              </div>
+            </li>
+          </ul>
+        </section>
+      </main>
+    </div>
 
     <script src="./src/scripts/valuesData.js"></script>
     <script type="module" src="./src/scripts/modal.js"></script>
